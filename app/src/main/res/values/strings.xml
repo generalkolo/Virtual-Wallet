@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Virtual Wallet</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username_password_text">Please enter your username and password below</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login_text">Login</string>
+    <string name="account_balance_text">Account Balance</string>
+    <string name="top_up_text">Enter Funds Amount to Top up Account</string>
+    <string name="funds_amount_hint">Funds Amount</string>
+    <string name="btn_top_up_text">Top up</string>
+    <string name="btn_log_out_text">Logout</string>
+
+    <!--formatter-->
+    <string name="naira_formatter">₦%s</string>
+</resources>

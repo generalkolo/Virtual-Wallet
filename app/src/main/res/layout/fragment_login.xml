@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.fragments.LoginFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/zero_two_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/username_password_text"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/zero_two_guide" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_textInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:hint="@string/username_hint"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/username_password_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_textInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:hint="@string/password_hint"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/username_textInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            style="@style/FilledWalletButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/btn_login_text"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/password_textInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

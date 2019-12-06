@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.fragments.FundWalletFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/zero_two_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/account_balance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/account_balance_text"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zero_two_guideline" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/account_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="@string/account_balance_text"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_balance_text"
+            tools:text="N300.00" />
+
+        <View
+            android:id="@+id/balance_seperator"
+            android:layout_width="wrap_content"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_balance" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/enter_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:gravity="center"
+            android:text="@string/top_up_text"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balance_seperator" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/funds_textInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:hint="@string/funds_amount_hint"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/enter_amount_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/funds_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/top_up_btn"
+            style="@style/FilledWalletButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/btn_top_up_text"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/funds_textInput" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/log_out_btn"
+            style="@style/TextWalletButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/btn_log_out_text"
+            app:layout_constraintEnd_toStartOf="@id/rightGuide"
+            app:layout_constraintStart_toEndOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/top_up_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
